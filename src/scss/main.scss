@@ -240,7 +240,7 @@ h3 {
 }
 
 .cards {
-	background: url(../img/cards-bg.svg) no-repeat center #fff;
+	background: url(../img/cards-bg.png) no-repeat center #fff;
 	background-size: cover;
 	padding: 25px 0;
 	display: flex;
@@ -254,21 +254,6 @@ h3 {
 	@include r(767) {
 		height: initial;
 		margin-bottom: 2%;
-	}
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background: #d64d4f;
-		background: -moz-linear-gradient(left, #d64d4f 0%, #377d90 100%);
-		background: -webkit-linear-gradient(left, #d64d4f 0%,#377d90 100%);
-		background: linear-gradient(to right, #d64d4f 0%,#377d90 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d64d4f', endColorstr='#377d90',GradientType=1 );
-		z-index: 1;
-		mix-blend-mode: hard-light;
 	}
 	h2 {
 		margin-bottom: 22px;
