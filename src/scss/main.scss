@@ -404,6 +404,9 @@ h3 {
 	background: transparent;
 	color: #fff;
 	font-size: 14px;
+	-webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
   }
   input:focus { outline:none; }
   
