@@ -9,11 +9,11 @@ $(document).ready(function(){
             repeat:-1
         });
 
-        TweenMax.to('.stars-form', 70,{
-            backgroundPosition: "" + $(window).width() +"px -"+ $(window).height() + "px",
-            ease: Linear.easeNone,
-            repeat:-1
-        });
+        // TweenMax.to('.stars-form', 70,{
+        //     backgroundPosition: "" + $(window).width() +"px -"+ $(window).height() + "px",
+        //     ease: Linear.easeNone,
+        //     repeat:-1
+        // });
 
         TweenMax.to('.stars-suc', 70,{
             backgroundPosition: "" + $(window).width() +"px 0px",
