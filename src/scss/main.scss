@@ -214,7 +214,12 @@ h3 {
 		@include md(5);
 		@include lg(5);
 		padding: 0;
-		@include r(1023) {padding-left: 15px}
+		@include r(1279) {margin-right: 20px}
+		@include r(1023) {
+			padding-left: 15px;
+			margin-right: 0;
+			padding-right: 15px;
+		}
 		@include r(767) {
 			padding-left: 0;
 			margin-bottom: 20px;
@@ -251,6 +256,7 @@ h3 {
 	height: 486px;
 	margin-bottom: 21%;
 	@include rmin(1281) {margin-bottom: 15%;}
+	@include r(1023) {margin-bottom: 30%;}
 	@include r(767) {
 		height: initial;
 		margin-bottom: 2%;
@@ -282,7 +288,10 @@ h3 {
 		background: #fff;
 		padding: 19px 29px;
 		height: 265px;
-		@include r(1023) {padding: 19px 15px;}
+		@include r(1023) {
+			padding: 19px 15px;
+			height: 275px;
+		}
 		@include r(767) {height: initial;}
 	}
 	&__count {
@@ -323,7 +332,7 @@ h3 {
 			height: 257px;
 			@include r(1023) {
 				padding: 19px 15px;
-				height: 285px;
+				height: 315px;
 			}
 			@include r(767) {height: initial;}
 		}
@@ -331,21 +340,51 @@ h3 {
 }
 
 .sponsors {
-	padding: 30px 0;	
+	padding: 30px 0 60px;	
 	@include r(767) {overflow: hidden;}
-	h3 {text-align: center;}
-	img {
-		margin-right: 70px;
-		margin-top: 50px;
+	h3 {
+		text-align: center;
+		margin-bottom: 40px;
 	}
 	.col-xs-10 {
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
+		@include r(1279) {
+			margin-left: 15px;
+			width: 95%;
+		}
+		@include r(1023) {flex-wrap: wrap}
 		@include r(767) {
-			padding-left: 15px;
+			padding-left: 0;
+			width: 95%;
+		}
+		&.logos {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 25px;
+			@include r(767) {
+				padding-left: 0;
+				img {height: 74px;}
+			}			
+		}
+	}
+}
+
+.logoItem {
+	display: flex;
+	&:first-child {margin-right: 40px;}
+	@include r(1023) {width: 100%;}
+	@include r(767) {flex-wrap: wrap}
+	&__logo {
+		margin-right: 20px;
+		@include r(1023) {
+			min-width: 210px;
+    		text-align: right;
+		}
+		@include r(767) {
 			width: 100%;
-			flex-wrap: wrap;
+    		text-align: left;
 		}
 	}
 }
