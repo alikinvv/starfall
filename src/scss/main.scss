@@ -373,6 +373,7 @@ h3 {
 
 .logoItem {
 	display: flex;
+	align-items: center;
 	&:first-child {margin-right: 40px;}
 	@include r(1023) {width: 100%;}
 	@include r(767) {flex-wrap: wrap}
@@ -386,6 +387,10 @@ h3 {
 			width: 100%;
     		text-align: left;
 		}
+	}
+	&__text {
+		font-size: 10px;
+		margin: 0;
 	}
 }
 
@@ -530,19 +535,24 @@ h3 {
 		@include overlay(0.3)  
 	  }
 	  h2 {
-		  text-align: left;
-		  @include r(374) {font-size: 45px}
-		}
+		text-align: left;
+		@include r(374) {font-size: 45px}
+	  }
+	  .center {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 999;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+	  }
 	  h1 {
 		color: #FDB66F;
 		font-size: 100px;
 		font-family: 'Amatic SC', sans-serif;
-		font-weight: bold;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: 10;
+		font-weight: bold;		
+		margin: 0;		
 		text-align: center;
 		width: 100%;
 		@include r(1023) {font-size: 70px}
@@ -605,4 +615,13 @@ h3 {
 ::selection {
     color: #fff; 
     background: #377D90;
+}
+
+@media (max-width: 736px) and (orientation:landscape) {
+	.formWrap-suc svg {
+		width: 180%;
+	}
+	.stars-suc {
+		background-size: 147%;
+	}
 }
